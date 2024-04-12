@@ -11,3 +11,8 @@ sky:
     access-key-id: LTAI5tCYmsLqkrvHxPHKmcfS
     access-key-secret: e7McOFAnDEnWXdrcyO80PUqSXq2nBj
     bucket-name: take-out-heima
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
