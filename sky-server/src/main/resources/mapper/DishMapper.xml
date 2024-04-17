@@ -31,8 +31,8 @@
     </delete>
 
     <select id="pageQuery" resultType="com.sky.vo.DishVO">
-        select d.id, d.name, d.category_id, d.price, d.image, d.description, d.status, d.create_time, d.update_time, d.create_user, d.update_user,df.name categoryName
-        from dish d left outer join dish_flavor df on d.id = df.dish_id
+        select d.*,c.name as categoryName
+        from dish d left outer join category c on d.category_id = c.id
         <where>
             <if test="name !=null">and d.name like concat('%',#{name},'%')</if>
             <if test="categoryId !=null">and d.category_id =#{categoryId} </if>

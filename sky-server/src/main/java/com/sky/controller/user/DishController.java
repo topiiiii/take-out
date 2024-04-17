@@ -13,6 +13,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 @RestController("userDishController")
@@ -40,7 +41,7 @@ public class DishController {
 
         List<DishVO> list1 = (List<DishVO>) redisTemplate.opsForValue().get(key);
         //如果没有数据，则执行下面，从数据库中拿查数据
-        if (list1 !=null && list1.size()>0) {
+        if (list1 != null && list1.size() > 0) {
             return Result.success(list1);
         }
 
@@ -51,9 +52,10 @@ public class DishController {
         List<DishVO> list = dishService.listWithFlavor(dish);
 
         //加入缓存
-        redisTemplate.opsForValue().set(key,list);
+        redisTemplate.opsForValue().set(key, list);
 
         return Result.success(list);
     }
+
 
 }
