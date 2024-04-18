@@ -66,4 +66,7 @@ public interface OrderMapper {
      * @return
      */
     Double sumByMap(Map map);
+
+
+    Integer getOrderCount(Map map);
 }
