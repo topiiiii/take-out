@@ -4,6 +4,8 @@ import com.sky.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.Map;
+
 /**
  * 类描述
  *
@@ -29,4 +31,11 @@ public interface UserMapper {
 
     @Select("select * from user where id=#{userID}")
     User getById(Long userId);
+
+    /**
+     * 动态查询用户新增数量
+     * @param map
+     * @return
+     */
+    Integer getUserNum(Map map);
 }
