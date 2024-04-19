@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 类描述
@@ -39,10 +40,11 @@ public interface SetmealDishMapper {
     void deleteBySetmealId(Long setmealId);
 
     /**
-     * 根据套餐id查询套餐和菜品的关联关系
-     * @param setmealId
+     * 根据套餐idssetmealId
      * @return
      */
     @Select("select * from setmeal_dish where setmeal_id = #{setmealId}")
     List<SetmealDish> getBySetmealId(Long setmealId);
+
+
 }

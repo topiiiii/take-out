@@ -37,5 +37,5 @@ public interface UserMapper {
      * @param map
      * @return
      */
-    Integer getUserNum(Map map);
+    Integer countByMap(Map map);
 }
