@@ -8,8 +8,8 @@ sky:
     password: 3121
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5tCYmsLqkrvHxPHKmcfS
-    access-key-secret: e7McOFAnDEnWXdrcyO80PUqSXq2nBj
+    access-key-id: 
+    access-key-secret: 
     bucket-name: take-out-heima
   redis:
     host: localhost
@@ -17,8 +17,8 @@ sky:
     password: 123456
     database: 10
   wechat:
-    appid: wx04ce8b3243e5d5c8
-    secret: 7a9d3666e3b68bdb3d87c884db6c04dd
+    appid: 
+    secret: 
     mchid:
     mch-serial-no:
     private-key-file-path:
